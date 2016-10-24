@@ -1,0 +1,89 @@
+{
+    "author": "Furrtek",
+    "dependencies": {},
+    "keywords": [],
+    "name": "chipref",
+    "pebble": {
+        "displayName": "ChipRef",
+        "enableMultiJS": true,
+        "messageKeys": [],
+        "projectType": "native",
+        "resources": {
+            "media": [
+                {
+                    "file": "images/icon.png",
+                    "menuIcon": true,
+                    "name": "ICON",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "data/74_10.pdc",
+                    "name": "PDC_74_10",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/dip14.pdc",
+                    "name": "PDC_DIP14",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/74_11.pdc",
+                    "name": "PDC_74_11",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/74_00.pdc",
+                    "name": "PDC_74_00",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/74_32.pdc",
+                    "name": "PDC_74_32",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/74_21.pdc",
+                    "name": "PDC_74_21",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/74_20.pdc",
+                    "name": "PDC_74_20",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/74_08.pdc",
+                    "name": "PDC_74_08",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/74_04.pdc",
+                    "name": "PDC_74_04",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                }
+            ]
+        },
+        "sdkVersion": "3",
+        "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "diorite",
+            "emery"
+        ],
+        "uuid": "375b08dc-a429-4e1b-ba70-06a81b6c4e92",
+        "watchapp": {
+            "watchface": false
+        }
+    },
+    "version": "1.0.0"
+}
