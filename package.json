@@ -11,6 +11,102 @@
         "resources": {
             "media": [
                 {
+                    "file": "data/74_27.pdc",
+                    "name": "PDC_74_27",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/74_74.pdc",
+                    "name": "PDC_74_74",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/74_86.pdc",
+                    "name": "PDC_74_86",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/4001.pdc",
+                    "name": "PDC_4001",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/4002.pdc",
+                    "name": "PDC_4002",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/4011.pdc",
+                    "name": "PDC_4011",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/4012.pdc",
+                    "name": "PDC_4012",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/4013.pdc",
+                    "name": "PDC_4013",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/4016.pdc",
+                    "name": "PDC_4016",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/4023.pdc",
+                    "name": "PDC_4023",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/4025.pdc",
+                    "name": "PDC_4025",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/4030.pdc",
+                    "name": "PDC_4030",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/4068.pdc",
+                    "name": "PDC_4068",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/dip14a.pdc",
+                    "name": "PDC_DIP14A",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/lm324.pdc",
+                    "name": "PDC_LM324",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/74_02.pdc",
+                    "name": "PDC_74_02",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
                     "file": "images/icon.png",
                     "menuIcon": true,
                     "name": "ICON",
