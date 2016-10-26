@@ -7,7 +7,7 @@ static void update_title(Layer *layer, GContext *ctx) {
   GFont font = fonts_get_system_font(FONT_KEY_GOTHIC_18_BOLD);
   graphics_draw_text(ctx, "ChipRef", font, GRect(0, -4, 72, 18), GTextOverflowModeWordWrap, GTextAlignmentRight, NULL);
   font = fonts_get_system_font(FONT_KEY_GOTHIC_18);
-  graphics_draw_text(ctx, "V0.11", font, GRect(72, -4, 72, 18), GTextOverflowModeWordWrap, GTextAlignmentLeft, NULL);
+  graphics_draw_text(ctx, "V0.11", font, GRect(80, -4, 72, 18), GTextOverflowModeWordWrap, GTextAlignmentLeft, NULL);
 }
 
 static void menu_select_callback(int index, void *ctx) {
@@ -67,6 +67,7 @@ static void win_main_load(Window *window) {
 static void win_main_unload(Window *window) {
   simple_menu_layer_destroy(lay_main_menu);
   layer_destroy(lay_title);
+  window_destroy(win_main);
 }
 
 static void init(void) {

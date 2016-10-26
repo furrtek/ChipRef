@@ -2,45 +2,66 @@
 #include "main.h"
 
 void update_chip(Layer *layer, GContext *ctx) {
-  uint32_t res_id;
-  uint8_t num_pins, ofx;
+  uint8_t num_pins, px = 0, py = 0, r, pin_number;
+  int8_t add_x, add_y;
+  char code;
   char buff_num[3];
+  GFont font;
+  GDrawCommandImage * draw_command;
+  const packdef_t * packdef;
+  const chipdef_t * chipdef;
   
-  GDrawCommandImage *s_command_package;
-  GDrawCommandImage *s_command_inside;
+  packdef = package_list[chipdefs[chip_id].package];
+  if (!packdef->frame) return;    // No package frame, error
+  
+  chipdef = &chipdefs[chip_id];
   
   GPoint origin = GPoint(0, 24);
 
-  res_id = package_list[chipdefs[chip_id].package];
-  if (res_id)
-    s_command_package = gdraw_command_image_create_with_resource(res_id);
-  s_command_inside = gdraw_command_image_create_with_resource(chipdefs[chip_id].schematic);
+  // Draw frame
+  draw_command = gdraw_command_image_create_with_resource(packdef->frame);
+  gdraw_command_image_draw(ctx, draw_command, origin);
+  gdraw_command_image_destroy(draw_command);
+  // Draw schematic
+  draw_command = gdraw_command_image_create_with_resource(chipdef->schematic);
+  gdraw_command_image_draw(ctx, draw_command, origin);
+  gdraw_command_image_destroy(draw_command);
   
-  if (res_id)
-    gdraw_command_image_draw(ctx, s_command_package, origin);
-  gdraw_command_image_draw(ctx, s_command_inside, origin);
-  
+  // Write reference and description
   graphics_context_set_text_color(ctx, GColorBlack);
-  GFont font = fonts_get_system_font(FONT_KEY_GOTHIC_18_BOLD);
-  graphics_draw_text(ctx, chipdefs[chip_id].ref, font, GRect(0, 0, 56, 18), GTextOverflowModeWordWrap, GTextAlignmentLeft, NULL);
+  font = fonts_get_system_font(FONT_KEY_GOTHIC_18_BOLD);
+  graphics_draw_text(ctx, chipdef->ref, font, GRect(0, 0, 56, 18), GTextOverflowModeWordWrap, GTextAlignmentLeft, NULL);
   font = fonts_get_system_font(FONT_KEY_GOTHIC_18);
-  graphics_draw_text(ctx, chipdefs[chip_id].desc, font, GRect(56, 0, 88, 18), GTextOverflowModeWordWrap, GTextAlignmentLeft, NULL);
+  graphics_draw_text(ctx, chipdef->desc, font, GRect(56, 0, 88, 18), GTextOverflowModeWordWrap, GTextAlignmentLeft, NULL);
   
+  // Draw pin numbers
   font = fonts_get_system_font(FONT_KEY_GOTHIC_14);
-  num_pins = 14;
-  ofx = 0;
-  for (c = 0; c < num_pins; c++) {
-    snprintf(buff_num, 3, "%u", c + 1);
-    if (c == 9) ofx = 4;
-    if (c < num_pins / 2)
-      graphics_draw_text(ctx, buff_num, font, GRect(16 + (c * 18), 144, 16, 14), GTextOverflowModeWordWrap, GTextAlignmentLeft, NULL);
-    else
-      graphics_draw_text(ctx, buff_num, font, GRect(250 - (c * 18) - ofx, 32, 16, 14), GTextOverflowModeWordWrap, GTextAlignmentLeft, NULL);
+  //num_pins = packdef->pincount;
+  c = 0;
+  pin_number = 1;
+  while ((code = packdef->pinmap[c++]) != 0xFF) {
+    if (!(code & 0x80)) {
+      // Origin
+      px = code;
+      py = packdef->pinmap[c++];
+    } else {
+      // Repeat
+      code &= 0x7F;
+      add_x = packdef->pinmap[c++];
+      if (add_x > 0x40) add_x = -(add_x & 0x3F);
+      add_y = packdef->pinmap[c++];
+      if (add_y > 0x40) add_y = -(add_y & 0x3F);
+      for (r = 0; r < code; r++) {
+        if (pin_number == 10)
+            px -= 3;    // Adjust for 2-digit numbers
+        snprintf(buff_num, 3, "%u", pin_number);
+        graphics_draw_text(ctx, buff_num, font, GRect(px, py, 16, 14), GTextOverflowModeWordWrap, GTextAlignmentLeft, NULL);
+        pin_number++;
+        px += add_x;
+        py += add_y;
+      }
+    }
   }
-
-  if (res_id)
-    gdraw_command_image_destroy(s_command_package);
-  gdraw_command_image_destroy(s_command_inside);
 }
 
 void win_chip_load(Window *window) {
@@ -54,4 +75,5 @@ void win_chip_load(Window *window) {
 
 void win_chip_unload(Window *window) {
   layer_destroy(lay_canvas);
+  window_destroy(win_chip);
 }

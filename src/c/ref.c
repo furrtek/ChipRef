@@ -41,4 +41,5 @@ void win_select_load(Window *window) {
 
 void win_select_unload(Window *window) {
   simple_menu_layer_destroy(lay_menu);
+  window_destroy(win_select);
 }

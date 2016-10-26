@@ -1,6 +1,8 @@
 #include <pebble.h>
 #include "chipdefs.h"
 
+uint8_t test;
+
 void update_chip(Layer *layer, GContext *ctx);
 void win_chip_load(Window *window);
 void win_chip_unload(Window *window);
