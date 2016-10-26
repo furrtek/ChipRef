@@ -1,8 +1,6 @@
 #include <pebble.h>
 #include "chipdefs.h"
 
-uint8_t test;
-
 void update_chip(Layer *layer, GContext *ctx);
 void win_chip_load(Window *window);
 void win_chip_unload(Window *window);
@@ -23,8 +21,8 @@ SimpleMenuSection main_menu_sections[1];
 SimpleMenuItem main_menu_items[MAX_CAT];
 SimpleMenuSection menu_items_sections[1];
 
-SimpleMenuItem menu_items_chips[32];        // Enough for now
-uint8_t menu_chip_id[32];
+SimpleMenuItem menu_items_chips[40];        // Enough for now
+uint8_t menu_chip_id[40];
 
 uint8_t c, count;
 int cat_id, chip_id;

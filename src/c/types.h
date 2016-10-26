@@ -1,7 +1,7 @@
 #pragma once
 #include <pebble.h>
 
-typedef enum {S74 = 0, C4000, ANA, MCU, MISC, MAX_CAT} category_t;
+typedef enum {S74 = 0, C4000, ANA, MCU, TRANS, REG, MAX_CAT} category_t;
 
 typedef struct {
   const char * str_ptr;

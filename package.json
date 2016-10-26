@@ -11,6 +11,24 @@
         "resources": {
             "media": [
                 {
+                    "file": "data/dip16.pdc",
+                    "name": "PDC_DIP16",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/dip20.pdc",
+                    "name": "PDC_DIP20",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/to92.pdc",
+                    "name": "PDC_TO92",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
                     "file": "data/lm741.pdc",
                     "name": "PDC_LM741",
                     "targetPlatforms": null,
@@ -241,5 +259,5 @@
             "watchface": false
         }
     },
-    "version": "0.1.0"
+    "version": "0.12.0"
 }

@@ -10,11 +10,11 @@ void update_chip(Layer *layer, GContext *ctx) {
   GDrawCommandImage * draw_command;
   const packdef_t * packdef;
   const chipdef_t * chipdef;
-  
-  packdef = chipdefs[chip_id].packdef;
-  if (!packdef->frame) return;    // No package frame, error
+  const char * pinmap;
   
   chipdef = &chipdefs[chip_id];
+  packdef = chipdef->packdef;
+  if (!packdef->frame) return;    // No package frame, error
   
   GPoint origin = GPoint(0, 24);
 
@@ -23,9 +23,11 @@ void update_chip(Layer *layer, GContext *ctx) {
   gdraw_command_image_draw(ctx, draw_command, origin);
   gdraw_command_image_destroy(draw_command);
   // Draw schematic
-  draw_command = gdraw_command_image_create_with_resource(chipdef->schematic);
-  gdraw_command_image_draw(ctx, draw_command, origin);
-  gdraw_command_image_destroy(draw_command);
+  if (chipdef->schematic) {
+    draw_command = gdraw_command_image_create_with_resource(chipdef->schematic);
+    gdraw_command_image_draw(ctx, draw_command, origin);
+    gdraw_command_image_destroy(draw_command);
+  }
   
   // Write reference and description
   graphics_context_set_text_color(ctx, GColorBlack);
@@ -39,26 +41,27 @@ void update_chip(Layer *layer, GContext *ctx) {
   //num_pins = packdef->pincount;
   c = 0;
   pin_number = 1;
-  while ((code = packdef->pinmap[c++]) != 0xFF) {
+  pinmap = packdef->pinmap;
+  while ((code = pinmap[c++]) != 0xFF) {
     if (!(code & 0x80)) {
       // Origin
       px = code;
-      py = packdef->pinmap[c++];
+      py = pinmap[c++];
     } else {
       // Repeat
       code &= 0x7F;
-      add_x = packdef->pinmap[c++];
+      add_x = pinmap[c++];
       if (add_x > 0x40) add_x = -(add_x & 0x3F);
-      add_y = packdef->pinmap[c++];
+      add_y = pinmap[c++];
       if (add_y > 0x40) add_y = -(add_y & 0x3F);
       for (r = 0; r < code; r++) {
         if (pin_number == 10)
             px -= 3;    // Adjust for 2-digit numbers
         snprintf(buff_num, 3, "%u", pin_number);
         graphics_draw_text(ctx, buff_num, font, GRect(px, py, 16, 14), GTextOverflowModeWordWrap, GTextAlignmentLeft, NULL);
-        pin_number++;
         px += add_x;
         py += add_y;
+        pin_number++;
       }
     }
   }
