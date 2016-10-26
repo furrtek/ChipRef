@@ -1,6 +1,7 @@
 #include <pebble.h>
 #include "pindefs.h"
 
+const char str_nc[] = {"NC"};
 const char str_gnd[] = {"GND"};
 const char str_vcc[] = {"VCC"};
 const char str_vp[] = {"Power (+)"};
@@ -16,6 +17,13 @@ const char str_dir[] = {"Direction"};
 const char str_innp[] = {"Input %u (+)"};
 const char str_innn[] = {"Input %u (-)"};
 const char str_out[] = {"Output"};
+const char str_offset[] = {"Offset"};
+
+// 8-pin single OA with offset
+const pindef_t oa_1_A[8] = {
+  {str_offset, 0}, {str_innn, 1}, {str_innp, 1}, {str_vn, 0},
+  {str_offset, 0}, {str_out, 0}, {str_vp, 1}, {str_nc, 0},
+};
 
 // Everyone looks to the right
 const pindef_t gates_2_A[14] = {

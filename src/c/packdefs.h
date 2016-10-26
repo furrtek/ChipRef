@@ -2,4 +2,11 @@
 #include "chipdefs.h"
 #include "types.h"
 
-const packdef_t * package_list[MAX_PACKAGES];
+const packdef_t package_DIP8;
+const packdef_t package_DIP8A;
+const packdef_t package_DIP8B;
+const packdef_t package_DIP8C;
+const packdef_t package_DIP8D;
+
+const packdef_t package_DIP14;
+const packdef_t package_DIP14A;

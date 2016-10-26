@@ -11,7 +11,7 @@ void update_chip(Layer *layer, GContext *ctx) {
   const packdef_t * packdef;
   const chipdef_t * chipdef;
   
-  packdef = package_list[chipdefs[chip_id].package];
+  packdef = chipdefs[chip_id].packdef;
   if (!packdef->frame) return;    // No package frame, error
   
   chipdef = &chipdefs[chip_id];

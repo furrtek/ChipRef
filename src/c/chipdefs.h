@@ -3,7 +3,7 @@
 #include "pindefs.h"
 #include "types.h"
 
-#define CHIPDEFS 23
+#define CHIPDEFS 28
 
 const chipdef_t chipdefs[CHIPDEFS];
 const char category_title[MAX_CAT][16];

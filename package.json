@@ -11,6 +11,66 @@
         "resources": {
             "media": [
                 {
+                    "file": "data/lm741.pdc",
+                    "name": "PDC_LM741",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/mc34063.pdc",
+                    "name": "PDC_MC34063",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/attinyx5.pdc",
+                    "name": "PDC_ATTINYX5",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/dip8.pdc",
+                    "name": "PDC_DIP8",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/dip8a.pdc",
+                    "name": "PDC_DIP8A",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/dip8b.pdc",
+                    "name": "PDC_DIP8B",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/dip8c.pdc",
+                    "name": "PDC_DIP8C",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/dip8d.pdc",
+                    "name": "PDC_DIP8D",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/555.pdc",
+                    "name": "PDC_555",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/12f675.pdc",
+                    "name": "PDC_12F675",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
                     "file": "data/74_27.pdc",
                     "name": "PDC_74_27",
                     "targetPlatforms": null,

@@ -1,6 +1,8 @@
 #pragma once
 #include "types.h"
 
+const pindef_t oa_1_A[8];
+
 const pindef_t gates_2_A[14];
 const pindef_t gates_2_B[14];
 const pindef_t gates_2_C[14];
