@@ -11,176 +11,50 @@
         "resources": {
             "media": [
                 {
-                    "file": "data/dip16.pdc",
-                    "name": "PDC_DIP16",
+                    "file": "data/4049.pdc",
+                    "name": "PDC_4049",
                     "targetPlatforms": null,
                     "type": "raw"
                 },
                 {
-                    "file": "data/dip20.pdc",
-                    "name": "PDC_DIP20",
+                    "file": "data/attinyx313.pdc",
+                    "name": "PDC_ATTINYX313",
                     "targetPlatforms": null,
                     "type": "raw"
                 },
                 {
-                    "file": "data/to92.pdc",
-                    "name": "PDC_TO92",
+                    "file": "data/dip16a.pdc",
+                    "name": "PDC_DIP16A",
                     "targetPlatforms": null,
                     "type": "raw"
                 },
                 {
-                    "file": "data/lm741.pdc",
-                    "name": "PDC_LM741",
+                    "file": "data/npndarl.pdc",
+                    "name": "PDC_NPNDARL",
                     "targetPlatforms": null,
                     "type": "raw"
                 },
                 {
-                    "file": "data/mc34063.pdc",
-                    "name": "PDC_MC34063",
+                    "file": "data/pnpdarl.pdc",
+                    "name": "PDC_PNPDARL",
                     "targetPlatforms": null,
                     "type": "raw"
                 },
                 {
-                    "file": "data/attinyx5.pdc",
-                    "name": "PDC_ATTINYX5",
+                    "file": "data/to220.pdc",
+                    "name": "PDC_TO220",
                     "targetPlatforms": null,
                     "type": "raw"
                 },
                 {
-                    "file": "data/dip8.pdc",
-                    "name": "PDC_DIP8",
+                    "file": "data/to126.pdc",
+                    "name": "PDC_TO126",
                     "targetPlatforms": null,
                     "type": "raw"
                 },
                 {
-                    "file": "data/dip8a.pdc",
-                    "name": "PDC_DIP8A",
-                    "targetPlatforms": null,
-                    "type": "raw"
-                },
-                {
-                    "file": "data/dip8b.pdc",
-                    "name": "PDC_DIP8B",
-                    "targetPlatforms": null,
-                    "type": "raw"
-                },
-                {
-                    "file": "data/dip8c.pdc",
-                    "name": "PDC_DIP8C",
-                    "targetPlatforms": null,
-                    "type": "raw"
-                },
-                {
-                    "file": "data/dip8d.pdc",
-                    "name": "PDC_DIP8D",
-                    "targetPlatforms": null,
-                    "type": "raw"
-                },
-                {
-                    "file": "data/555.pdc",
-                    "name": "PDC_555",
-                    "targetPlatforms": null,
-                    "type": "raw"
-                },
-                {
-                    "file": "data/12f675.pdc",
-                    "name": "PDC_12F675",
-                    "targetPlatforms": null,
-                    "type": "raw"
-                },
-                {
-                    "file": "data/74_27.pdc",
-                    "name": "PDC_74_27",
-                    "targetPlatforms": null,
-                    "type": "raw"
-                },
-                {
-                    "file": "data/74_74.pdc",
-                    "name": "PDC_74_74",
-                    "targetPlatforms": null,
-                    "type": "raw"
-                },
-                {
-                    "file": "data/74_86.pdc",
-                    "name": "PDC_74_86",
-                    "targetPlatforms": null,
-                    "type": "raw"
-                },
-                {
-                    "file": "data/4001.pdc",
-                    "name": "PDC_4001",
-                    "targetPlatforms": null,
-                    "type": "raw"
-                },
-                {
-                    "file": "data/4002.pdc",
-                    "name": "PDC_4002",
-                    "targetPlatforms": null,
-                    "type": "raw"
-                },
-                {
-                    "file": "data/4011.pdc",
-                    "name": "PDC_4011",
-                    "targetPlatforms": null,
-                    "type": "raw"
-                },
-                {
-                    "file": "data/4012.pdc",
-                    "name": "PDC_4012",
-                    "targetPlatforms": null,
-                    "type": "raw"
-                },
-                {
-                    "file": "data/4013.pdc",
-                    "name": "PDC_4013",
-                    "targetPlatforms": null,
-                    "type": "raw"
-                },
-                {
-                    "file": "data/4016.pdc",
-                    "name": "PDC_4016",
-                    "targetPlatforms": null,
-                    "type": "raw"
-                },
-                {
-                    "file": "data/4023.pdc",
-                    "name": "PDC_4023",
-                    "targetPlatforms": null,
-                    "type": "raw"
-                },
-                {
-                    "file": "data/4025.pdc",
-                    "name": "PDC_4025",
-                    "targetPlatforms": null,
-                    "type": "raw"
-                },
-                {
-                    "file": "data/4030.pdc",
-                    "name": "PDC_4030",
-                    "targetPlatforms": null,
-                    "type": "raw"
-                },
-                {
-                    "file": "data/4068.pdc",
-                    "name": "PDC_4068",
-                    "targetPlatforms": null,
-                    "type": "raw"
-                },
-                {
-                    "file": "data/dip14a.pdc",
-                    "name": "PDC_DIP14A",
-                    "targetPlatforms": null,
-                    "type": "raw"
-                },
-                {
-                    "file": "data/lm324.pdc",
-                    "name": "PDC_LM324",
-                    "targetPlatforms": null,
-                    "type": "raw"
-                },
-                {
-                    "file": "data/74_02.pdc",
-                    "name": "PDC_74_02",
+                    "file": "data/sot223.pdc",
+                    "name": "PDC_SOT223",
                     "targetPlatforms": null,
                     "type": "raw"
                 },
@@ -192,8 +66,74 @@
                     "type": "bitmap"
                 },
                 {
-                    "file": "data/74_10.pdc",
-                    "name": "PDC_74_10",
+                    "file": "data/to92.pdc",
+                    "name": "PDC_TO92",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/mc34063.pdc",
+                    "name": "PDC_MC34063",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/lm741.pdc",
+                    "name": "PDC_LM741",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/lm324.pdc",
+                    "name": "PDC_LM324",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/dip8d.pdc",
+                    "name": "PDC_DIP8D",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/dip8c.pdc",
+                    "name": "PDC_DIP8C",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/dip8b.pdc",
+                    "name": "PDC_DIP8B",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/dip8a.pdc",
+                    "name": "PDC_DIP8A",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/dip8.pdc",
+                    "name": "PDC_DIP8",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/dip20.pdc",
+                    "name": "PDC_DIP20",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/dip16.pdc",
+                    "name": "PDC_DIP16",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/dip14a.pdc",
+                    "name": "PDC_DIP14A",
                     "targetPlatforms": null,
                     "type": "raw"
                 },
@@ -204,20 +144,32 @@
                     "type": "raw"
                 },
                 {
-                    "file": "data/74_11.pdc",
-                    "name": "PDC_74_11",
+                    "file": "data/attinyx5.pdc",
+                    "name": "PDC_ATTINYX5",
                     "targetPlatforms": null,
                     "type": "raw"
                 },
                 {
-                    "file": "data/74_00.pdc",
-                    "name": "PDC_74_00",
+                    "file": "data/74_86.pdc",
+                    "name": "PDC_74_86",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/74_74.pdc",
+                    "name": "PDC_74_74",
                     "targetPlatforms": null,
                     "type": "raw"
                 },
                 {
                     "file": "data/74_32.pdc",
                     "name": "PDC_74_32",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/74_27.pdc",
+                    "name": "PDC_74_27",
                     "targetPlatforms": null,
                     "type": "raw"
                 },
@@ -234,6 +186,18 @@
                     "type": "raw"
                 },
                 {
+                    "file": "data/74_11.pdc",
+                    "name": "PDC_74_11",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/74_10.pdc",
+                    "name": "PDC_74_10",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
                     "file": "data/74_08.pdc",
                     "name": "PDC_74_08",
                     "targetPlatforms": null,
@@ -242,6 +206,90 @@
                 {
                     "file": "data/74_04.pdc",
                     "name": "PDC_74_04",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/74_02.pdc",
+                    "name": "PDC_74_02",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/74_00.pdc",
+                    "name": "PDC_74_00",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/555.pdc",
+                    "name": "PDC_555",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/4068.pdc",
+                    "name": "PDC_4068",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/4030.pdc",
+                    "name": "PDC_4030",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/4025.pdc",
+                    "name": "PDC_4025",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/4023.pdc",
+                    "name": "PDC_4023",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/4016.pdc",
+                    "name": "PDC_4016",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/4013.pdc",
+                    "name": "PDC_4013",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/4012.pdc",
+                    "name": "PDC_4012",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/4011.pdc",
+                    "name": "PDC_4011",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/4002.pdc",
+                    "name": "PDC_4002",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/4001.pdc",
+                    "name": "PDC_4001",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/12f675.pdc",
+                    "name": "PDC_12F675",
                     "targetPlatforms": null,
                     "type": "raw"
                 }

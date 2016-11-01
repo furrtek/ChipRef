@@ -1,6 +1,26 @@
 #include <pebble.h>
 #include "packdefs.h"
 
+const char pinmap_TO92[] = {
+  48, 116,                  // Origin
+  0x80 | 3, 21, 0,          // Repeat 3 times, X+21
+  255
+};
+
+const packdef_t package_TO92 = {
+  "TO92",  3,  RESOURCE_ID_PDC_TO92, pinmap_TO92
+};
+
+const char pinmap_TO220[] = {
+  46, 122,                  // Origin
+  0x80 | 3, 21, 0,          // Repeat 3 times, X+21
+  255
+};
+
+const packdef_t package_TO220 = {
+  "TO220",  3,  RESOURCE_ID_PDC_TO220, pinmap_TO220
+};
+
 const char pinmap_DIP8[] = {
   42, 118,                  // Origin
   0x80 | 4, 18, 0,          // Repeat 4 times, X+18
@@ -52,22 +72,18 @@ const packdef_t package_DIP16 = {
   "DIP16",  16,  RESOURCE_ID_PDC_DIP16, pinmap_DIP16
 };
 
-const char pinmap_TO92[] = {
-  48, 116,                  // Origin
-  0x80 | 3, 22, 0,          // Repeat 3 times, X+22
+const packdef_t package_DIP16A = {
+  "DIP16",  16,  RESOURCE_ID_PDC_DIP16A, pinmap_DIP16
+};
+
+const char pinmap_DIP20[] = {
+  13, 118,                  // Origin
+  0x80 | 10, 12, 0,         // Repeat 10 times, X+12
+  124, 8,                   // Origin
+  0x80 | 10, 0x40 | 13, 0,  // Repeat 10 times, X-13
   255
 };
 
-const packdef_t package_TO92 = {
-  "TO92",  3,  RESOURCE_ID_PDC_TO92, pinmap_TO92
-};
-
-const char pinmap_TO220[] = {
-  39, 142,                  // Origin
-  0x80 | 3, 16, 0,          // Repeat 3 times, X+16
-  255
-};
-
-const packdef_t package_TO220 = {
-  "TO220",  3,  0, pinmap_TO220      // TODO: RESOURCE_ID_PDC_TO220
+const packdef_t package_DIP20 = {
+  "DIP20",  20,  RESOURCE_ID_PDC_DIP20, pinmap_DIP20
 };

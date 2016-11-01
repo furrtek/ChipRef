@@ -18,8 +18,8 @@ typedef struct {
 } packdef_t;
 
 typedef struct {
-  const char ref[8];
-  const char desc[16];
+  const char ref[9];
+  const char desc[17];
   const category_t category;
   const packdef_t * packdef;
   const uint32_t schematic;  // Resource ID

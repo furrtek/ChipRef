@@ -37,11 +37,18 @@ const char str_scl[] = {"I²C SCL"};
 const char str_osci[] = {"Oscillator in"};
 const char str_osco[] = {"Oscillator out"};
 const char str_addrn[] = {"Address A%u"};
+const char str_portAn[] = {"Port A pin %u"};
+const char str_portBn[] = {"Port B pin %u"};
+const char str_portCn[] = {"Port C pin %u"};
+const char str_a[] = {"Anode"};
+const char str_k[] = {"Cathode"};
 
 const pindef_t trans_ebc[3] = { {str_e, 0}, {str_b, 0}, {str_c, 0} };
 const pindef_t trans_cbe[3] = { {str_c, 0}, {str_b, 0}, {str_e, 0} };
 const pindef_t trans_sgd[3] = { {str_s, 0}, {str_g, 0}, {str_d, 0} };
-const pindef_t reg_igo[3] = { {str_vp, 0}, {str_gnd, 0}, {str_out, 0} };
+const pindef_t reg_igo[3] = { {str_vp, 0}, {str_gnd, 0}, {str_out, 0} };  // +V
+const pindef_t reg_ogi[3] = { {str_out, 0}, {str_gnd, 0}, {str_vp, 0} };  // +V
+const pindef_t reg_gio[3] = { {str_gnd, 0}, {str_vn, 0}, {str_out, 0} };  // -V
 
 // Single - OA with offset
 const pindef_t oa_1_A[8] = {
@@ -53,6 +60,12 @@ const pindef_t oa_1_A[8] = {
 const pindef_t ne555[8] = {
   {str_gnd, 0}, {str_trig, 0}, {str_out, 0}, {str_reset, 0},
   {str_vctrl, 0}, {str_thres, 0}, {str_dis, 0}, {str_vcc, 0},
+};
+
+// ATTiny - Model A
+const pindef_t tiny_A[8] = {
+  {str_reset, 0}, {str_portBn, 3}, {str_portBn, 4}, {str_gnd, 0},
+  {str_portBn, 0}, {str_portBn, 1}, {str_portBn, 2}, {str_vcc, 0},
 };
 
 // Hex - Everyone looks to the right
