@@ -1,11 +1,10 @@
 #include <pebble.h>
 #include "packdefs.h"
-#include "pindefs.h"
 
 const char pinmap_DIP8[] = {
-  42, 142,                  // Origin
+  42, 118,                  // Origin
   0x80 | 4, 18, 0,          // Repeat 4 times, X+18
-  97, 32,                   // Origin
+  96, 8,                    // Origin
   0x80 | 4, 0x40 | 18, 0,   // Repeat 4 times, X-18
   255
 };
@@ -27,9 +26,9 @@ const packdef_t package_DIP8D = {
 };
 
 const char pinmap_DIP14[] = {
-  16, 142,                  // Origin
+  15, 118,                  // Origin
   0x80 | 7, 18, 0,          // Repeat 7 times, X+18
-  124, 32,                  // Origin
+  123, 8,                   // Origin
   0x80 | 7, 0x40 | 18, 0,   // Repeat 7 times, X-18
   255
 };
@@ -42,9 +41,9 @@ const packdef_t package_DIP14A = {
 };
 
 const char pinmap_DIP16[] = {
-  14, 142,                  // Origin
+  13, 118,                  // Origin
   0x80 | 8, 16, 0,          // Repeat 8 times, X+16
-  126, 32,                  // Origin
+  126, 8,                   // Origin
   0x80 | 8, 0x40 | 16, 0,   // Repeat 8 times, X-16
   255
 };
@@ -54,8 +53,8 @@ const packdef_t package_DIP16 = {
 };
 
 const char pinmap_TO92[] = {
-  46, 128,                  // Origin
-  0x80 | 3, 20, 0,          // Repeat 3 times, X+24
+  48, 116,                  // Origin
+  0x80 | 3, 22, 0,          // Repeat 3 times, X+22
   255
 };
 
@@ -64,7 +63,7 @@ const packdef_t package_TO92 = {
 };
 
 const char pinmap_TO220[] = {
-  40, 142,                  // Origin
+  39, 142,                  // Origin
   0x80 | 3, 16, 0,          // Repeat 3 times, X+16
   255
 };

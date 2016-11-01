@@ -1,3 +1,5 @@
+#pragma once
+
 #include <pebble.h>
 #include "chipdefs.h"
 
@@ -13,8 +15,10 @@ Window * win_main;
 Window * win_select;
 Window * win_chip;
 
-Layer * lay_canvas;
 Layer * lay_title;
+ScrollLayer * lay_scroll;
+Layer * lay_canvas;
+TextLayer * lay_pininfo;
 SimpleMenuLayer * lay_main_menu;
 SimpleMenuLayer * lay_menu;
 SimpleMenuSection main_menu_sections[1];
@@ -25,5 +29,7 @@ SimpleMenuItem menu_items_chips[40];        // Enough for now
 uint8_t menu_chip_id[40];
 
 uint8_t c, count;
+uint8_t pin_selected, chip_pincount;
 int cat_id, chip_id;
-char buff_str[MAX_CAT][16];    // Ugly, gen at compile time
+char buff_str[MAX_CAT][16];    // Ugly
+char buff_info[32];            // For pin infos
