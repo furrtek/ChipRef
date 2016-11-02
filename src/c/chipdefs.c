@@ -28,6 +28,7 @@ const chipdef_t chipdefs[CHIPDEFS] = {
   {"LM324",     "Quad OA",         ANA,   &package_DIP14A,  RESOURCE_ID_PDC_LM324,    oa_4_A},
   {"LM741",     "Single OA",       ANA,   &package_DIP8D,   RESOURCE_ID_PDC_LM741,    oa_1_A},
   {"NE555",     "Timer",           ANA,   &package_DIP8A,   RESOURCE_ID_PDC_555,      ne555},
+  // TL431
   {"Tiny13",    "AVR MCU",         MCU,   &package_DIP8,    RESOURCE_ID_PDC_ATTINYX5, tiny_A},
   {"Tiny*313",  "AVR MCU",         MCU,   &package_DIP20,   RESOURCE_ID_PDC_ATTINYX313, NULL},
   {"Tiny*5",    "AVR MCU",         MCU,   &package_DIP8,    RESOURCE_ID_PDC_ATTINYX5, tiny_A},

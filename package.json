@@ -11,6 +11,30 @@
         "resources": {
             "media": [
                 {
+                    "file": "data/pin_dipLdown.pdc",
+                    "name": "PDC_PINDIP_L_DOWN",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/pin_dipLdownS.pdc",
+                    "name": "PDC_PINDIP_L_DOWN_S",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/pin_dipLup.pdc",
+                    "name": "PDC_PINDIP_L_UP",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
+                    "file": "data/pin_dipLupS.pdc",
+                    "name": "PDC_PINDIP_L_UP_S",
+                    "targetPlatforms": null,
+                    "type": "raw"
+                },
+                {
                     "file": "data/4049.pdc",
                     "name": "PDC_4049",
                     "targetPlatforms": null,
@@ -304,5 +328,5 @@
             "watchface": false
         }
     },
-    "version": "0.12.0"
+    "version": "0.13.0"
 }

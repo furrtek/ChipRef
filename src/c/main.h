@@ -18,6 +18,7 @@ Window * win_chip;
 Layer * lay_title;
 ScrollLayer * lay_scroll;
 Layer * lay_canvas;
+TextLayer * lay_pinnumber;
 TextLayer * lay_pininfo;
 SimpleMenuLayer * lay_main_menu;
 SimpleMenuLayer * lay_menu;
@@ -33,3 +34,4 @@ uint8_t pin_selected, chip_pincount;
 int cat_id, chip_id;
 char buff_str[MAX_CAT][16];    // Ugly
 char buff_info[32];            // For pin infos
+char buff_number[3];           // For pin number

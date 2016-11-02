@@ -3,6 +3,8 @@
 #include "chipdefs.h"
 #include "types.h"
 
+const uint32_t pin_shapes[5];
+
 const packdef_t package_TO92;
 const packdef_t package_TO220;
 

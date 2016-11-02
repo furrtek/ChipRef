@@ -14,7 +14,7 @@ typedef struct {
   const char name[8];
   const uint8_t pincount;
   const uint32_t frame;  // Resource ID
-  const char * pinmap;
+  const int8_t * pinmap;
 } packdef_t;
 
 typedef struct {

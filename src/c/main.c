@@ -2,15 +2,20 @@
 #include "main.h"
 #include "chipdefs.h"
 
+// Todo: Fix 3-pin, 16-pin and 20-pin package pin drawing "scripts" (all DIP8 and DIP14 are OK)
+// Todo: Maybe make BUTTON_ID_BACK go back to "overview mode" in chip display, instead of going back to refs menu
+// Todo: Add a bunch of transistors
+// Todo: Remove pin numbering in pin description view. Show big pin number on the bottom left of display
 // Todo: Custom storage format for infos and graphics
 // Todo: Split frames (DIP8, DIP14...) and power pin placement (+, -) to avoid data duplication
+// Todo: Marking translator ? (chip resistor, color code...)
 
 static void update_title(Layer *layer, GContext *ctx) {
   // Just write version
   graphics_context_set_text_color(ctx, GColorBlack);
   graphics_draw_text(ctx, "ChipRef", fonts_get_system_font(FONT_KEY_GOTHIC_18_BOLD), GRect(0, -4, 72, 18),
                      GTextOverflowModeWordWrap, GTextAlignmentRight, NULL);
-  graphics_draw_text(ctx, "V0.12", fonts_get_system_font(FONT_KEY_GOTHIC_18), GRect(80, -4, 72, 18),
+  graphics_draw_text(ctx, "V0.13", fonts_get_system_font(FONT_KEY_GOTHIC_18), GRect(80, -4, 72, 18),
                      GTextOverflowModeWordWrap, GTextAlignmentLeft, NULL);
 }
 
