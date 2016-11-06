@@ -40,15 +40,34 @@ const char str_addrn[] = {"Address A%u"};
 const char str_portAn[] = {"Port A pin %u"};
 const char str_portBn[] = {"Port B pin %u"};
 const char str_portCn[] = {"Port C pin %u"};
+const char str_portDn[] = {"Port C pin %u"};
 const char str_a[] = {"Anode"};
 const char str_k[] = {"Cathode"};
+const char str_adj[] = {"Adjust"};
+const char str_vref[] = {"Voltage reference"};
+const char str_timecap[] = {"Timing capacitor"};
+const char str_isense[] = {"Current sense"};
+const char str_drive[] = {"Drive supply"};
+const char str_gpn[] = {"GPIO %u"};
+const char str_din[] = {"Data in"};
+const char str_outin[] = {"Inverted output %u"};
+const char str_inoutn[] = {"Input/Output %u"};
+const char str_outinn[] = {"Output/Input %u"};
+const char str_ctrln[] = {"Control %u"};
 
 const pindef_t trans_ebc[3] = { {str_e, 0}, {str_b, 0}, {str_c, 0} };
 const pindef_t trans_cbe[3] = { {str_c, 0}, {str_b, 0}, {str_e, 0} };
+const pindef_t trans_ecb[3] = { {str_e, 0}, {str_c, 0}, {str_b, 0} };
+const pindef_t trans_bce[3] = { {str_b, 0}, {str_c, 0}, {str_e, 0} };
 const pindef_t trans_sgd[3] = { {str_s, 0}, {str_g, 0}, {str_d, 0} };
+const pindef_t trans_gds[3] = { {str_g, 0}, {str_d, 0}, {str_s, 0} };
 const pindef_t reg_igo[3] = { {str_vp, 0}, {str_gnd, 0}, {str_out, 0} };  // +V
 const pindef_t reg_ogi[3] = { {str_out, 0}, {str_gnd, 0}, {str_vp, 0} };  // +V
 const pindef_t reg_gio[3] = { {str_gnd, 0}, {str_vn, 0}, {str_out, 0} };  // -V
+const pindef_t reg_goi[3] = { {str_gnd, 0}, {str_out, 0}, {str_vp, 0} };  // 1117
+const pindef_t reg_aio[3] = { {str_adj, 0}, {str_vp, 0}, {str_out, 0} };  // 317
+
+const pindef_t tl431[3] = { {str_vref, 0}, {str_a, 0}, {str_k, 0} };
 
 // Single - OA with offset
 const pindef_t oa_1_A[8] = {
@@ -66,6 +85,29 @@ const pindef_t ne555[8] = {
 const pindef_t tiny_A[8] = {
   {str_reset, 0}, {str_portBn, 3}, {str_portBn, 4}, {str_gnd, 0},
   {str_portBn, 0}, {str_portBn, 1}, {str_portBn, 2}, {str_vcc, 0},
+};
+
+// ATTiny - Model B
+const pindef_t tiny_B[20] = {
+  {str_reset, 0},
+  {str_portDn, 0}, {str_portDn, 1},
+  {str_portAn, 1}, {str_portAn, 0},
+  {str_portDn, 2}, {str_portDn, 3}, {str_portDn, 4}, {str_portDn, 5},
+  {str_gnd, 0},
+  {str_portDn, 6},
+  {str_portBn, 0}, {str_portBn, 1}, {str_portBn, 2}, {str_portBn, 3},
+  {str_portBn, 4}, {str_portBn, 5}, {str_portBn, 6}, {str_portBn, 7},
+  {str_vcc, 0}
+};
+
+const pindef_t reg_34063[8] = {
+  {str_c, 0}, {str_e, 0}, {str_timecap, 0}, {str_gnd, 0},
+  {str_innn, 1}, {str_vcc, 0}, {str_isense, 0}, {str_drive, 0},
+};
+
+const pindef_t pic12f675[8] = {
+  {str_vcc, 0}, {str_gpn, 5}, {str_gpn, 4}, {str_reset, 0},
+  {str_gpn, 2}, {str_gpn, 1}, {str_gpn, 0}, {str_gnd, 0},
 };
 
 // Hex - Everyone looks to the right
@@ -154,4 +196,54 @@ const pindef_t oa_4_A[14] = {
   {str_outn, 3}, {str_innn, 3}, {str_innp, 3},
   {str_vn, 0},
   {str_innp, 4}, {str_innn, 4}, {str_outn, 4},
+};
+
+// Quad - DFF
+const pindef_t dff_A[14] = {
+  {str_reset, 1}, {str_din, 1}, {str_clk, 1}, {str_set, 1}, {str_outn, 1}, {str_outin, 1},
+  {str_gnd, 0},
+  {str_outin, 2}, {str_outn, 2}, {str_set, 2}, {str_clk, 2}, {str_din, 2}, {str_reset, 2},
+  {str_vcc, 0}
+};
+
+// Quad - DFF
+const pindef_t dff_B[14] = {
+  {str_outn, 1}, {str_outin, 1}, {str_clk, 1}, {str_reset, 1}, {str_din, 1}, {str_set, 1},
+  {str_gnd, 0},
+  {str_set, 2}, {str_din, 2}, {str_reset, 2}, {str_clk, 2}, {str_outin, 2}, {str_outn, 2},
+  {str_vcc, 0}
+};
+
+// Quad - Switches
+const pindef_t switch_2_A[14] = {
+  {str_inoutn, 1}, {str_outinn, 1}, {str_outinn, 2}, {str_inoutn, 2}, {str_ctrln, 2}, {str_ctrln, 3},
+  {str_gnd, 0},
+  {str_inoutn, 3}, {str_outinn, 3}, {str_outinn, 4}, {str_inoutn, 4}, {str_ctrln, 4}, {str_ctrln, 1},
+  {str_vcc, 0}
+};
+
+// Single - 8-NAND
+const pindef_t gates_8[14] = {
+  {str_nc, 0},
+  {str_inAn, 1}, {str_inAn, 2}, {str_inAn, 3}, {str_inAn, 4},
+  {str_nc, 0},
+  {str_gnd, 0},
+  {str_nc, 0},
+  {str_inAn, 5}, {str_inAn, 6}, {str_inAn, 7}, {str_inAn, 8},
+  {str_out, 1}, 
+  {str_vcc, 0}
+};
+
+// Hex - Everyone looks to the left
+const pindef_t gates_1_B[16] = {
+  {str_vcc, 0},
+  {str_outn, 1}, {str_inAn, 1},
+  {str_outn, 2}, {str_inAn, 2},
+  {str_outn, 3}, {str_inAn, 3},
+  {str_gnd, 0},
+  {str_inAn, 4}, {str_outn, 4},
+  {str_inAn, 4}, {str_outn, 4},
+  {str_nc, 0},
+  {str_inAn, 4}, {str_outn, 4},
+  {str_nc, 0}
 };

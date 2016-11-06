@@ -4,7 +4,6 @@
 
 // Todo: Fix 3-pin, 16-pin and 20-pin package pin drawing "scripts" (all DIP8 and DIP14 are OK)
 // Todo: Maybe make BUTTON_ID_BACK go back to "overview mode" in chip display, instead of going back to refs menu
-// Todo: Add a bunch of transistors
 // Todo: Remove pin numbering in pin description view. Show big pin number on the bottom left of display
 // Todo: Custom storage format for infos and graphics
 // Todo: Split frames (DIP8, DIP14...) and power pin placement (+, -) to avoid data duplication

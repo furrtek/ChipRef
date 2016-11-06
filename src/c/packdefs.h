@@ -6,7 +6,9 @@
 const uint32_t pin_shapes[5];
 
 const packdef_t package_TO92;
+const packdef_t package_TO126;
 const packdef_t package_TO220;
+const packdef_t package_SOT223;
 
 const packdef_t package_DIP8;
 const packdef_t package_DIP8A;

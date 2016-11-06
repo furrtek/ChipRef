@@ -19,6 +19,16 @@ const packdef_t package_TO92 = {
   "TO92",  3,  RESOURCE_ID_PDC_TO92, pinmap_TO92
 };
 
+const int8_t pinmap_TO126[] = {
+  46, 122,               // Origin
+  3, 21, 0, 0, 0, 0      // Repeat 3 times, X+=21, Y+=0, text offset, pin shape ID
+  -1                     // End
+};
+
+const packdef_t package_TO126 = {
+  "TO126",  3,  RESOURCE_ID_PDC_TO126, pinmap_TO126
+};
+
 const int8_t pinmap_TO220[] = {
   46, 122,               // Origin
   3, 21, 0, 0, 0, 0      // Repeat 3 times, X+=21, Y+=0, text offset, pin shape ID
@@ -29,10 +39,20 @@ const packdef_t package_TO220 = {
   "TO220",  3,  RESOURCE_ID_PDC_TO220, pinmap_TO220
 };
 
+const int8_t pinmap_SOT223[] = {
+  46, 122,               // Origin
+  3, 21, 0, 0, 0, 0      // Repeat 3 times, X+=21, Y+=0, text offset, pin shape ID
+  -1                     // End
+};
+
+const packdef_t package_SOT223 = {
+  "SOT223",  3,  RESOURCE_ID_PDC_SOT223, pinmap_SOT223
+};
+
 const int8_t pinmap_DIP8[] = {
-  38, 108,               // Origin
+  39, 108,               // Origin
   4, 18, 0, 3, 10, 1,    // Repeat 4 times, X+=18, Y+=0, text offset, pin shape ID
-  92, 23,                // Origin
+  93, 24,                // Origin
   4, -18, 0, 3, -15, 3,  // Repeat 4 times, X-=18, Y+=0, text offset, pin shape ID
   -1                     // End
 };
@@ -56,7 +76,7 @@ const packdef_t package_DIP8D = {
 const int8_t pinmap_DIP14[] = {
   12, 108,               // Origin
   7, 18, 0, 3, 10, 1,    // Repeat 7 times, X+=18, Y+=0, text offset, pin shape ID
-  120, 23,               // Origin
+  120, 24,               // Origin
   7, -18, 0, 3, -15, 3,  // Repeat 7 times, X-=18, Y+=0, text offset, pin shape ID
   -1                     // End
 };
