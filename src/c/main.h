@@ -29,7 +29,7 @@ SimpleMenuLayer * lay_menu;
 TextLayer * lay_resvalue;
 TextLayer * lay_resinfo;
 SimpleMenuSection main_menu_sections[1];
-SimpleMenuItem main_menu_items[MAX_CAT];
+SimpleMenuItem main_menu_items[MAX_CAT + 1];
 SimpleMenuSection menu_items_sections[1];
 
 SimpleMenuItem menu_items_chips[40];        // Enough for now
@@ -43,3 +43,4 @@ char buff_info[32];            // For pin infos
 char buff_number[5];
 uint8_t resvalue[4];
 uint8_t edit_idx;
+uint8_t cursor;
