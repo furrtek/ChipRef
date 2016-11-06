@@ -11,7 +11,11 @@ void chip_select_callback(int index, void *ctx);
 void win_select_load(Window *window);
 void win_select_unload(Window *window);
 
+void win_resistor_load(Window *window);
+void win_resistor_unload(Window *window);
+
 Window * win_main;
+Window * win_resistor;
 Window * win_select;
 Window * win_chip;
 
@@ -22,6 +26,8 @@ TextLayer * lay_pinnumber;
 TextLayer * lay_pininfo;
 SimpleMenuLayer * lay_main_menu;
 SimpleMenuLayer * lay_menu;
+TextLayer * lay_resvalue;
+TextLayer * lay_resinfo;
 SimpleMenuSection main_menu_sections[1];
 SimpleMenuItem main_menu_items[MAX_CAT];
 SimpleMenuSection menu_items_sections[1];
@@ -34,4 +40,6 @@ uint8_t pin_selected, chip_pincount;
 int cat_id, chip_id;
 char buff_str[MAX_CAT][16];    // Ugly
 char buff_info[32];            // For pin infos
-char buff_number[3];           // For pin number
+char buff_number[5];
+uint8_t resvalue[4];
+uint8_t edit_idx;

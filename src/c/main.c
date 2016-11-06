@@ -7,7 +7,6 @@
 // Todo: Remove pin numbering in pin description view. Show big pin number on the bottom left of display
 // Todo: Custom storage format for infos and graphics
 // Todo: Split frames (DIP8, DIP14...) and power pin placement (+, -) to avoid data duplication
-// Todo: Marking translator ? (chip resistor, color code...)
 
 static void update_title(Layer *layer, GContext *ctx) {
   // Just write version
@@ -19,18 +18,27 @@ static void update_title(Layer *layer, GContext *ctx) {
 }
 
 static void menu_select_callback(int index, void *ctx) {
-  cat_id = index;
-  
-	win_select = window_create();
-  window_set_window_handlers(win_select, (WindowHandlers) {
-    .load = win_select_load,
-    .unload = win_select_unload,
-  });
-	window_stack_push(win_select, true);
+  if (index == 0) {
+  	win_resistor = window_create();
+    window_set_window_handlers(win_resistor, (WindowHandlers) {
+      .load = win_resistor_load,
+      .unload = win_resistor_unload,
+    });
+  	window_stack_push(win_resistor, true);
+  } else {
+    cat_id = index - 1;
+    
+  	win_select = window_create();
+    window_set_window_handlers(win_select, (WindowHandlers) {
+      .load = win_select_load,
+      .unload = win_select_unload,
+    });
+  	window_stack_push(win_select, true);
+  }
 }
 
 static void win_main_load(Window *window) {
-  uint8_t cat;
+  uint8_t cat, menu_idx = 0;;
   void * cb;
   
   Layer * lay_main = window_get_root_layer(win_main);
@@ -39,6 +47,11 @@ static void win_main_load(Window *window) {
   lay_title = layer_create(GRect(0, 0, bounds.size.w, 18));
   layer_set_update_proc(lay_title, update_title);
   layer_add_child(lay_main, lay_title);
+  
+  main_menu_items[menu_idx++] = (SimpleMenuItem) {
+    .title = "Resistor calculator",
+    .callback = menu_select_callback
+  };
   
   // Generate category menu items
   for (cat = 0; cat < MAX_CAT; cat++) {
@@ -57,7 +70,7 @@ static void win_main_load(Window *window) {
     }
     
     // Ugly, would be better if generated at compile time
-    main_menu_items[cat] = (SimpleMenuItem) {
+    main_menu_items[menu_idx++] = (SimpleMenuItem) {
       .title = &category_title[cat][0],
       .callback = cb,
       .subtitle = &buff_str[cat][0]
@@ -65,7 +78,7 @@ static void win_main_load(Window *window) {
   }
   
   main_menu_sections[0] = (SimpleMenuSection) {
-    .num_items = MAX_CAT,
+    .num_items = menu_idx,
     .items = main_menu_items,
   };
   
